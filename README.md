@@ -43,8 +43,16 @@ R <sup>2</sup> performance is as follows:
 
 **_Perform a privacy evaluation of the synthetic dataset, by using a privacy evaluation tool. You can use e.g. Anonymeter (https://github.com/statice/anonymeter), and focus on metrics that can be computed from the synthetic data directly. There are other tools around, but many of them provide attack-based evaluation (e.g. membership inference attacks), which are computationally expensive. Again, select the most interesting aspects from the evaluation for your report._**
 
-| Types of Data |
-| ------------- | 
-| _Inference Evaluator_  | 
-| _SinglingOut Evaluator_  |
-| _Multivariat_  |
+| Types of Data | Privacy Risk value| Privacy Risk ci|
+| ------------- | ------------- | ------------- |
+| _Inference Evaluator_  | 0.012927173613013914| (0.0, 0.050249748708354386)|
+| _SinglingOut Evaluator_  | 0.0| (0.0, 0.0013568577126237004)|
+| _Multivariat_  | 0.0| (0.0, 0.3114370598291518)|
+
+
+![image](https://github.com/MalikAsadAftab/Seoul-Bike-Renting-Synthetic-Data-Generation/assets/21192916/43178382-e25d-4eff-b6c9-25eaf4ff9dbc)
+As visible, a few columns, i.e., 'Solar Radiation (MJ/m2)' and 'Snowfall (cm)', in the dataset carry a significant inference risk, while 'Humidity(%)', 'Seasons', and 'Rented Bike Count' possess less inference risk.
+
+This means that an attacker in possession of the synthetic dataset can use it to infer some attribute of records in the original data, beyond what can be explained by utility.
+
+
