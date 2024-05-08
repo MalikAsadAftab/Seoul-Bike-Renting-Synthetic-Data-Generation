@@ -8,13 +8,16 @@ The exercise thus consists of roughly the following steps:
 
 _Pick a tabular dataset from a public repository; ideally, the dataset contains some sensitive/personal attributes (age, income, education, diagnosis, ....). Overall, your dataset does not need to be too large, anything from 1k samples up should be fine.
 (we focus on tabular data due to computational costs/runtime, interpretability of the results, and the meaningfulness of fidelity & privacy evaluation; if you would want to work with some other data modality, contact me, we can discuss if that is feasible)_
+
 We picked the Seoul-Bike-Renting dataset (having 14 features) from the UCI ML Repository (https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand). 
 
 _Chose a data synthetisation framework; while there are many frameworks around, we can recommend the (Synthetic Data Vault)[https://github.com/sdv-dev/SDV] (SDV) as a very comprehensive tool including many different techniques (their original Gaussian Copula, but also CTGAN, and implementations of Bayesian Networks, ...) , gretel.ai; synthpop offers decision trees (primary implementation is in R), DataSynthesizer offers Bayesian Networks. You can find a curated list e.g. at https://github.com/joofio/awesome-data-synthesis_
+
 The SDV framework is utilized and we used the TVAESynthesizer technique with enforce_min_max_values=True, enforce_rounding=True, and epochs=2000. 
 
 
 _Prepare your data for evaluation; basically, you shall have a test set available for testing classifiers_
+
 Only 80% of the original data was utilized to generate synthetic data; for simplicity reasons, just created a dataset with the same number of samples as the original dataset. The 20% remaining was kept to evaluate the classifier models trained separately on the original and its corresponding synthetic data.
 
 
@@ -27,6 +30,7 @@ _Perform a fidelity evaluation of the synthetic dataset by comparing data charac
 | _TVComplement_           | 0.6822209179514293  | This value suggests that a Total Variation distance complement of 0.68 would suggest that `there is some difference between the distributions, but they share a notable portion of their shapes. It's an indication of similarity, though not complete identity, between the distributions`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 _Perform a utility evaluation of the synthetic dataset by training one classifier model, once on the original training data and once on the synthetic data; then evaluate both models on the test data and compare their performance. Use a fast, shallow, but still powerful model (e.g. SVM, RF, Boosting algorithms, ....)_
+
 R <sup>2</sup> performance is as follows:
 
 
