@@ -51,6 +51,7 @@ R <sup>2</sup> performance is as follows:
 
 
 ![image](https://github.com/MalikAsadAftab/Seoul-Bike-Renting-Synthetic-Data-Generation/assets/21192916/43178382-e25d-4eff-b6c9-25eaf4ff9dbc)
+<br>
 As visible, a few columns, i.e., 'Solar Radiation (MJ/m2)' and 'Snowfall (cm)', in the dataset carry a significant inference risk, while 'Humidity(%)', 'Seasons', and 'Rented Bike Count' possess less inference risk.
 
 This means that an attacker in possession of the synthetic dataset can use it to infer some attribute of records in the original data, beyond what can be explained by utility.
