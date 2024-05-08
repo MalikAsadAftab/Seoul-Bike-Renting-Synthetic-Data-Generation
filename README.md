@@ -1,7 +1,9 @@
 # Seoul-Bike-Renting-Synthetic-Data-Generation
-Synthetic data was generated using the original dataset from UCI ML Repository (https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand)
+
+Synthetic data was generated using the original dataset from UCI ML Repository _[https://archive.ics.uci.edu/dataset/560/seoul+bike+sharing+demand]_
 
 **Synthetic Data Creation and Evaluation**
+
 In this task, you will work with a synthetic data generation tool and evaluate the fidelity, utility and privacy aspects of the synthetic data; to keep computation times reasonable, you shall work with tabular data. The idea is that you use existing tools, and mainly develop the boilerplate code around using these tools (dataset loading, spitting, model training, calling evaluation tools, ....).
 
 The exercise thus consists of roughly the following steps:
