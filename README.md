@@ -57,3 +57,14 @@ As visible, a few columns, i.e., 'Solar Radiation (MJ/m2)' and 'Snowfall (cm)', 
 This means that an attacker in possession of the synthetic dataset can use it to infer some attribute of records in the original data, beyond what can be explained by utility.
 
 
+
+---
+
+Feel free to reach out if you have any questions or need further assistance.
+
+Happy Coding!
+
+For further queries or help, don't hesitate to get in touch either via email: [asad.aftab@tuwien.ac.at](mailto:asad.aftab@tuwien.ac.at) or through [LinkedIn: Asad Aftab](https://www.linkedin.com/in/asad-aftab-malak/).
+
+[![Email](https://img.icons8.com/color/48/000000/email.png)](mailto:asad.aftab@tuwien.ac.at)
+[![LinkedIn](https://img.icons8.com/color/48/000000/linkedin.png)](https://www.linkedin.com/in/asad-aftab-malak/)
